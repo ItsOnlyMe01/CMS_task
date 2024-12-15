@@ -14,7 +14,7 @@ const ComplaintForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/complaints", {
+      await axios.post("/complaints", {
         title,
         description,
         category,

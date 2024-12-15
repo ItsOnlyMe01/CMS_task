@@ -9,7 +9,7 @@ const ComplaintTable = () => {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await axios.get("/api/complaints");
+        const response = await axios.get("/complaints");
         setComplaints(response.data);
       } catch (error) {
         console.error("Error fetching complaints:", error);
@@ -21,7 +21,7 @@ const ComplaintTable = () => {
 
   const handleStatusUpdate = async (id, status) => {
     try {
-      await axios.put(`/api/complaints/${id}`, { status });
+      await axios.put(`/complaints/${id}`, { status });
       setComplaints(
         complaints.map((complaint) =>
           complaint._id === id ? { ...complaint, status } : complaint
@@ -34,7 +34,7 @@ const ComplaintTable = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/complaints/${id}`);
+      await axios.delete(`/complaints/${id}`);
       setComplaints(complaints.filter((complaint) => complaint._id !== id));
     } catch (error) {
       console.error("Error deleting complaint:", error);
