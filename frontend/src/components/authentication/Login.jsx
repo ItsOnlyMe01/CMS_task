@@ -51,7 +51,7 @@ const Login = () => {
       return;
     }
     try {
-      const { data } = await axios.post("/api/home/login", {
+      const { data } = await axios.post("/home/login", {
         email,
         password,
         isAdmin,
