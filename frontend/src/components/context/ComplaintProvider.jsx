@@ -9,16 +9,10 @@ const ComplaintProvider = ({ children }) => {
   const [notifications, setNotifications] = useState([]);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-
-  //   if (!userInfo) {
-  //     navigate("/home");
-  //   } else {
-  //     setUser(userInfo);
-  //     console.log("User Info:", userInfo);
-  //   }
-  // }, [navigate]);
+  useEffect(() => {
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    setUser(userInfo);
+  }, [navigate]);
 
   useEffect(() => {
     console.log(isAdmin);

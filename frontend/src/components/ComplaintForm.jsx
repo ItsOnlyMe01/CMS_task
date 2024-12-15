@@ -12,6 +12,7 @@ const ComplaintForm = () => {
   const { user } = useContext(ComplaintContext);
 
   const handleSubmit = async (e) => {
+    console.log(user);
     e.preventDefault();
     try {
       await axios.post("/complaints", {

@@ -16,7 +16,7 @@ const getAdminEmail = async () => {
 // saving complaint and sending email of complaint request
 router.post("/", async (req, res) => {
   const { title, description, category, priority, user } = req.body;
-
+  console.log(req.body);
   const newComplaint = new Complaint({
     title,
     description,
