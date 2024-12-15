@@ -18,7 +18,7 @@ const ComplaintProvider = ({ children }) => {
       setUser(userInfo);
       console.log("User Info:", userInfo);
     }
-  }, [navigate]);
+  }, []);
 
   useEffect(() => {
     console.log(isAdmin);
