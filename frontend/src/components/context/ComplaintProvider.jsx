@@ -13,12 +13,12 @@ const ComplaintProvider = ({ children }) => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
     if (!userInfo) {
-      navigate("/");
+      navigate("/home");
     } else {
       setUser(userInfo);
       console.log("User Info:", userInfo);
     }
-  }, []);
+  }, [navigate]);
 
   useEffect(() => {
     console.log(isAdmin);
