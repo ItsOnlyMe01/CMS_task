@@ -1,0 +1,13 @@
+{
+  "name": "complaint_management",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Backend/index.js",
+    "server": "node Backend/index.js"
+  },
+  "keywords": [],
+  "author": "Ritesh",
+  "license": "ISC",
+  "description": ""
+}
